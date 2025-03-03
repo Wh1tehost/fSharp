@@ -47,7 +47,6 @@ and Manual acc =
     
     match input with
     | "q" -> 
-        printfn "Выход из программы."
         printfn "" 
         List.rev acc  // Возвращаем список в правильном порядке (переворачиваем)
     | _ ->
