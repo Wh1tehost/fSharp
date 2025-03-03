@@ -1,12 +1,10 @@
 open System
 
-// Функция проверки первого символа
+// Функция проверки первого символа (с учётом отрицательных чисел)
 let startsWithDigit digit number =
     let str = number.ToString() 
-    if str.Length > 0 && str.[0] <> '-' then  // Проверяем, что строка не пустая и не начинается с '-'
-        str.[0] = digit  // Сравниваем первую цифру
-    else
-        false
+    let firstCharIndex = if str.[0] = '-' then 1 else 0  // Определяем индекс первого символа числа
+    str.[firstCharIndex] = digit  // Сравниваем первую цифру
 
 // Функция для List.fold
 let folder digit acc x =
