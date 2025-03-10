@@ -53,6 +53,3 @@ let main() =
         files 
         |> Seq.iter (printfn "%s")  // Для каждого элемента последовательности производится вывод в отдельной строке
 main()
-
-
-///Users/vladverholancev/Documents/Test
